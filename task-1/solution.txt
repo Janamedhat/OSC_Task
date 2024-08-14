@@ -1,0 +1,32 @@
+osc@osc:~$ mkdir jana
+osc@osc:~$ ls
+osc@osc:~$ cd jana/
+osc@osc:~/jana$ touch one.txt two.txt three.txt four.txt
+osc@osc:~/jana$ ls
+osc@osc:~/jana$ cd ..
+osc@osc:~$ mkdir -p jana/BAD
+osc@osc:~$ cd jana/BAD/
+osc@osc:~/jana/BAD$ touch bad.txt
+osc@osc:~/jana/BAD$ cd ~
+osc@osc:~$ cd jana/
+osc@osc:~/jana$ mv one.txt ~/downloads
+osc@osc:~/jana$ cd ..
+osc@osc:~$ cd downloads/
+osc@osc:~/downloads$ cp one.txt copy.txt.
+osc@osc:~/downloads$ cd ..
+osc@osc:~$ cd jana/
+osc@osc:~/jana$ nano two.txt
+osc@osc:~/jana$ cat two.txt
+jana
+osc@osc:~/jana$ cat three.txt
+1-hello osc
+2-hello osc
+3-hello osc
+4-hello osc
+5-hello osc
+6-hello osc
+7-hello osc
+8-hello osc
+osc@osc:~/jana$ mv three.txt hello.txt
+osc@osc:~/jana$ rm four.txt
+osc@osc:~/jana$ rm -r BAD
