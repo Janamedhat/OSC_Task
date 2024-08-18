@@ -16,10 +16,7 @@ git checkout intro
 git add greeting.txt 
 git commit -m "added i love git"
 git log
-git merge intro
-git log
 git checkout main
 git merge intro
 git log
 git tag -a v1
-
