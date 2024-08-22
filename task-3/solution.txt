@@ -17,19 +17,17 @@ cd ..
 cd logs/
 nano system.log
 tar -czvf logs_backup.tar.gz system.log error.log file1.pdf file2.pdf
-ls -lh
-cd ..
 mv logs_backup.tar.gz project_files
-cd logs/
-tar -xzvf logs_backup.tar.gz
+tar -xzvf logs_backup.tar.gz -C project_files/logs
 cd ~
 find . -name "*.md"
 cd project_files/
 find . -name "*.log"
 find . -name file1.pdf
-find . -name "*.pdf"
+find . -iname "*.pdf"
 cd logs
-find -empty
+find -type f
+cd ..
 ln -s data.csv link_data.csv
 ls -l
 echo " hello osc">data.csv
@@ -39,27 +37,15 @@ cat data.csv
 unlink link_data.csv 
  ls -l
  touch summary.txt
-echo "summary start" > summary.txt 
-touch -t 2408081536 summary.txt 
-ls | tee summary.txt 
-cat summary.txt 
+echo "summary start" > summary.txt
+date>>summary.txt 
+wc -l summary.txt | tee -a summary.txt  
 cd reports/
 wc -w report1.md
 cd ..
 cd logs/
-wc -c system.log 
-cat system.log >> summary.txt
-wc -c summary.txt
+wc -c system.log | tee -a summary.txt 
 cd ..
 ls | wc -l
-cat project_files >> summary.txt
-wc -l summary.txt 
-ls | tee summary.txt
-
-
- 
-
-
-
-
-
+find project_files|wc -l| >> summary.txt
+cat summary.txt
