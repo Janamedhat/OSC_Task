@@ -46,6 +46,5 @@ cd ..
 cd logs/
 wc -c system.log | tee -a summary.txt 
 cd ..
-ls | wc -l
 find project_files|wc -l| >> summary.txt
 cat summary.txt
